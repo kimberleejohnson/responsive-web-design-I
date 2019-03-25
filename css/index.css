@@ -241,16 +241,30 @@ h1, h2, h3, h4, h5 {
                     border-bottom:1px solid lightgrey; 
 				}
     
-    /* Removing tagline image*/
-    .tagline img {
-		/* creating space */
-		display: none;
-    }
-    
     /* Centering tagline text */
     .tagline {
         justify-content: center; 
-	}
+    }
+    
+        /* removing tagline image*/
+        .tagline img {
+        /* making image disappear */
+            display: none;
+        }
+
+        .tagline .cta-text {
+            /* resetting margin for mobile */
+            margin: 5%; 
+            padding-top: 0%;
+            padding-bottom: 0%; 
+        }
+
+        .tagline .cta-text button {
+            /* resetting margin and border for mobile */
+            margin: 2%; 
+            border: 1px solid black;
+        }
+        }
 
     .page-content {
 		/* Border set as a line break illusion */
