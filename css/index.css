@@ -194,13 +194,16 @@ h1, h2, h3, h4, h5 {
 		margin: 32px 0;
 		text-align: center;
 		font-size: 14px;
-	}
-
+    }
+        
+    
+/* MEDIA RESPONSIVENESS */    
 /* Building web responsivity with media queries*/
 /* Code for mobile adjustments */
 
 @media (max-width: 500px){
-      header {
+
+    header {
         /*Keeping display: flex here so nav inherits */
         display: flex;  
         /* Logo and nav bar display in a column, with logo on top*/
@@ -217,8 +220,7 @@ h1, h2, h3, h4, h5 {
             margin: 0%;  
             padding-top: 10%; 
             padding-bottom: 10%;  
-            border-bottom:2px solid lightgrey;
-
+            border-bottom:2px solid lightgrey; 
         }
 
 		/* header nav wraps around my entire list of items */
@@ -243,6 +245,7 @@ h1, h2, h3, h4, h5 {
     
     /* Centering tagline text */
     .tagline {
+        display: flex; 
         justify-content: center; 
     }
     
@@ -250,13 +253,13 @@ h1, h2, h3, h4, h5 {
         .tagline img {
         /* making image disappear */
             display: none;
+            margin: 0%; 
         }
 
         .tagline .cta-text {
             /* resetting margin for mobile */
             margin: 5%; 
-            padding-top: 0%;
-            padding-bottom: 0%; 
+            padding: 0%; 
         }
 
         .tagline .cta-text button {
@@ -266,34 +269,53 @@ h1, h2, h3, h4, h5 {
         }
         }
 
+     /** Text of website **/
     .page-content {
-		/* Border set as a line break illusion */
-        border-top: 1px solid black;
-        /* Adding a flex here so page can display in column */
         display: flex; 
+        /* Both top-content and bottom-content to display as columns */
+        flex-direction: column;
+        /* Centers top content and bottom content */
+        align-items: center; 
+        border-top: 1px solid black;
+        /* Removing margin and padding to better center*/
+		margin: 0%;
+		padding: 0%;
 	}
 
 	.page-content .top-content {
-		/* Setting up display: flex for the parent container of my content-box*/ 
-        justify-content: space-between; 
+        /* Have to keep flex-direction twice so that columns stay */
+        flex-direction: column;
+        display: flex;   
+        width: 50%; 
+        /* Removing padding to see centering*/
+		padding: 0%;
+    } 
+
+    .top-content .content-box {
+        padding: 5%; 
+    }
+
+    .bottom-content .content-box {
+        padding: 5%; 
+    }
+    
+    .page-content .bottom-content {
+        /* Display:flex so my image inherits some of the flex properties */
+        display:flex; 
         flex-direction: column; 
-		/* Set top right padding at 0; bottom left padding at 10 px */
-		padding: 0 10px;
-	} 
+        width: 50%; 
+        /* Removing margin and padding */
+        padding: 0%; 
+        margin: 0%; 
+	}
 
 	.page-content .middle-img {
         /* Fix image to display on mobile*/ 
-        width: 100%; 
-        display: block; 
-	}
-
-	.page-content .bottom-content {
-		/* Setting up display: flex for bottom content*/
         display: flex; 
         flex-direction: column; 
-		margin-top: 37px;
-		padding: 0 10px;
+        width: 50%; 
 	}
+
 
 /* Contact CSS */
 /* Contact includes address and paragraph addresses */
