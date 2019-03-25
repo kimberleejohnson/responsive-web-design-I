@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5 {
 
 @media (max-width: 500px){
       header {
-        /*Keeping display-flex here so nav inherits */
+        /*Keeping display: flex here so nav inherits */
         display: flex;  
         /* Logo and nav bar display in a column, with logo on top*/
         flex-direction: column-reverse; 
@@ -213,7 +213,12 @@ h1, h2, h3, h4, h5 {
         header .logo {
             /* Adding margin until logo vertically aligns */
             justify-content: center; 
-            border-bottom:1px solid gray; 
+            /* Removing margin for centering */
+            margin: 0%;  
+            padding-top: 10%; 
+            padding-bottom: 10%;  
+            border-bottom:2px solid lightgrey;
+
         }
 
 		/* header nav wraps around my entire list of items */
@@ -227,11 +232,13 @@ h1, h2, h3, h4, h5 {
 			
 				/* Styles every list item in my nav */
 				header nav a {
-                    font-size: 18px;
+                    font-size: 20px;
                     text-align: center; 
-                    padding: 5%; 
-					color: gray;
-                    border-bottom:1px solid gray; 
+                    padding: 30%; 
+                    color: gray;
+                    /* Resetting margin to see if better centers */
+                    margin: 0%; 
+                    border-bottom:1px solid lightgrey; 
 				}
     
     /* Removing tagline image*/
@@ -263,7 +270,7 @@ h1, h2, h3, h4, h5 {
 	.page-content .middle-img {
         /* Fix image to display on mobile*/ 
         width: 100%; 
-       display: block; 
+        display: block; 
 	}
 
 	.page-content .bottom-content {
