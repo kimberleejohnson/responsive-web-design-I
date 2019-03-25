@@ -196,79 +196,104 @@ h1, h2, h3, h4, h5 {
 		font-size: 14px;
 	}
 
-/*Services-specific CSS starts here!  */
+/* Building web responsivity with media queries*/
+/* Code for mobile adjustments */
 
-	/*Styling the intro at the top of the page */
-		/*Header styling*/
-		.services-summary h2 {
-			font-size: 30px; 
-		}
+@media (max-width: 500px){
+      header {
+        /*Keeping display-flex here so nav inherits */
+        display: flex;  
+        /* Logo and nav bar display in a column, with logo on top*/
+        flex-direction: column-reverse; 
+        /* Space between the header logo and nav bar; pushes both to edge */ 
+        justify-content: space-between;
+        align-items: center; 
+        } 
+        
+        header .logo {
+            /* Adding margin until logo vertically aligns */
+            justify-content: center; 
+            border-bottom:1px solid gray; 
+        }
 
-		.services-summary div {
-			padding-bottom: 30px; 
-			border-bottom: 1px solid black; 
-		}
-
-		.services-header-img {
-			/* Set only a top and bottom margin so image still centers */ 
-			margin-top: 30px; 
-			margin-bottom: 30px; 
-		}
-
-	/*Styling the details section*/
-		.services-details {
-			display: flex; 
-			flex-wrap: wrap;
-			justify-content: space-between; 
-			padding-top: 30px; 
-			padding-bottom: 30px; 
-			border-bottom: 1px solid black; 
-		}
-
-		.detail-box {  
-			border: 1px solid black;
-			background-color: whitesmoke;  
-			padding: 20px; 
-			width: 45%;  
-			margin-bottom: 40px; 
-		}
-
-		.detail-box button {
-			padding: 10px; 
-			padding-right: 40px; 
-			padding-left: 40px; 
-			margin-top: 10px; 
-			border: 1px solid black;
-			border-radius: 5px; 
-		}
-
-	/*Styling the services facts section*/
-	.services-facts {
-		display: flex; 
+		/* header nav wraps around my entire list of items */
+		header nav {
+			flex-direction: column; 
+			/* Even space between each menu item */
+			justify-content: space-evenly; 
+			/* Aligns items in the center */
+			align-items: center; 
+			}
+			
+				/* Styles every list item in my nav */
+				header nav a {
+                    font-size: 18px;
+                    text-align: center; 
+                    padding: 5%; 
+					color: gray;
+                    border-bottom:1px solid gray; 
+				}
+    
+    /* Removing tagline image*/
+    .tagline img {
+		/* creating space */
+		display: none;
+    }
+    
+    /* Centering tagline text */
+    .tagline {
+        justify-content: center; 
 	}
 
-	.services-facts h2 {
-		padding-top: 20px; 
+    .page-content {
+		/* Border set as a line break illusion */
+        border-top: 1px solid black;
+        /* Adding a flex here so page can display in column */
+        display: flex; 
 	}
 
-	.services-facts p {
-		padding-top: 10px; 
-		padding-bottom: 20px;  
-		margin-right: 50px; 
+	.page-content .top-content {
+		/* Setting up display: flex for the parent container of my content-box*/ 
+        justify-content: space-between; 
+        flex-direction: column; 
+		/* Set top right padding at 0; bottom left padding at 10 px */
+		padding: 0 10px;
+	} 
+
+	.page-content .middle-img {
+        /* Fix image to display on mobile*/ 
+        width: 100%; 
+       display: block; 
 	}
 
-	.services-facts ul {
-		padding-left: 30px; 
-		padding-bottom: 20px; 
-		list-style-type: square; 
+	.page-content .bottom-content {
+		/* Setting up display: flex for bottom content*/
+        display: flex; 
+        flex-direction: column; 
+		margin-top: 37px;
+		padding: 0 10px;
 	}
 
-	.services-facts li {
-		padding: 5px; 
+/* Contact CSS */
+/* Contact includes address and paragraph addresses */
+
+	address {
+		margin-top: 57px;
+		border-top: 1px solid black;
+		padding: 39px 10px 0;
+	}
+	
+	address p {
+		margin: 20px 0;
 	}
 
-	.services-info-img {
-		margin-top: 20px; 
+/* Footer CSS */
+/* Styling the copyright to be center of the page */
+
+	footer {
+		margin: 32px 0;
+		text-align: center;
+		font-size: 14px;
 	}
 
-
+}
