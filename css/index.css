@@ -215,6 +215,7 @@ h1, h2, h3, h4, h5 {
         /* Space between the header logo and nav bar; pushes both to edge */ 
         justify-content: space-between;
         align-items: center; 
+        width: 100%; 
         } 
         
         header .logo {
@@ -224,7 +225,6 @@ h1, h2, h3, h4, h5 {
             margin: 0%;  
             padding-top: 10%; 
             padding-bottom: 10%;  
-            border-bottom:2px solid lightgrey; 
         }
 
 		/* header nav wraps around my entire list of items */
@@ -234,17 +234,20 @@ h1, h2, h3, h4, h5 {
 			justify-content: space-evenly; 
 			/* Aligns items in the center */
             align-items: center; 
+            width: 75%; 
 			}
 			
 				/* Styles every list item in my nav */
 				header nav a {
                     font-size: 20px;
                     text-align: center; 
-                    padding: 30%; 
+                    padding: 5%; 
                     color: gray;
                     /* Resetting margin to see if better centers */
                     margin: 0%; 
+                    width: 100%; 
                     border-bottom:1px solid lightgrey;  
+                    border-top: 1px solid lightgrey; 
 				}
     
     /* Centering tagline text */
