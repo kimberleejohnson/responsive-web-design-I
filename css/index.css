@@ -217,7 +217,94 @@ h1, h2, h3, h4, h5 {
             width: 100%; 
         }
 
+            header nav {
+                justify-content: space-between; 
+                width: 75%; 
+                }
+        
+        /* Centering tagline text */
+        .tagline {
+            display: flex; 
+            justify-content: center; 
+        }
+        
+            /* removing tagline image*/
+            .tagline img {
+            /* making image disappear */
+                display: none;
+                margin: 0%; 
+            }
 
+            .tagline .cta-text {
+                /* resetting margin for tablet */
+                margin: 5%; 
+                padding-top: 5%; 
+                padding-bottom: 0%; 
+
+            }
+
+            .page-content {
+                display: flex; 
+                /* Both top-content and bottom-content to display as columns */
+                flex-direction: column;
+                /* Centers top content and bottom content */
+                align-items: center; 
+                /* Removing margin and padding to better center*/
+                margin: 0%;
+                padding: 0%;
+                /* Removing border from top of padding*/
+                border-top: 0; 
+            }
+        
+            .page-content .top-content {
+                /* Have to keep flex-direction twice so that columns stay */
+                display: flex;   
+                width: 80%; 
+                /* Removing padding to see centering*/
+                padding: 0%;
+                border-top: 1px solid black; 
+            } 
+        
+            .top-content .content-box {
+                padding: 5%; 
+            }
+        
+            .bottom-content .content-box {
+                padding: 5%; 
+            }
+            
+            .page-content .bottom-content {
+                /* Display:flex so my image inherits some of the flex properties */
+                display:flex; 
+                width: 80%; 
+                /* Removing margin and padding */
+                padding: 0%; 
+                margin: 0%; 
+                border-bottom: 1px solid black; 
+            }
+        
+            .page-content .middle-img {
+                /* Fix image to display on mobile*/ 
+                display: flex; 
+                flex-direction: column; 
+                width: 80%; 
+                margin-top: 2%; 
+                margin-bottom: 2%; 
+            }
+            address {   
+                display: flex; 
+                flex-direction: column; 
+                width: 80%; 
+                margin-top: 0px;
+                margin-left: 10%; 
+                border-top: 0px;
+                padding-top: 5%; 
+            }
+            
+            address p {
+                margin-top: 2%;
+                margin-bottom: 2%;
+            }
 }
 
 /* CODE FOR MOBILE */
@@ -317,6 +404,7 @@ h1, h2, h3, h4, h5 {
         display: flex;   
         width: 50%; 
         /* Removing padding to see centering*/
+        border-top: 0; 
 		padding: 0%;
     } 
 
@@ -343,7 +431,9 @@ h1, h2, h3, h4, h5 {
         /* Fix image to display on mobile*/ 
         display: flex; 
         flex-direction: column; 
-        width: 50%; 
+        width: 50%;
+        margin-top: 2%; 
+        margin-bottom: 2%;  
 	}
 
 
